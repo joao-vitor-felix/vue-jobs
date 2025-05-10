@@ -1,3 +1,5 @@
+import AddJob from '@/pages/AddJob.vue'
+import EditJob from '@/pages/EditJob.vue'
 import Home from '@/pages/Home.vue'
 import Job from '@/pages/Job.vue'
 import Jobs from '@/pages/Jobs.vue'
@@ -21,6 +23,16 @@ const router = createRouter({
       path: '/jobs/:id',
       name: 'job',
       component: Job,
+    },
+    {
+      path: '/jobs/add',
+      name: 'add-job',
+      component: AddJob,
+    },
+    {
+      path: '/jobs/edit/:id',
+      name: 'edit-job',
+      component: EditJob,
     },
     {
       path: '/:pathMatch(.*)*',
