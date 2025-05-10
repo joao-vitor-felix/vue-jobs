@@ -1,5 +1,6 @@
 import Home from '@/pages/Home.vue'
 import Jobs from '@/pages/Jobs.vue'
+import NotFound from '@/pages/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/jobs',
       name: 'jobs',
       component: Jobs,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFound,
     },
   ],
 })
